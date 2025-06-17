@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOD专区 - SDEAM游戏论坛</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/mod-zone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="logo">
+                    <h1>SDEAM</h1>
+                    <span>游戏玩家的聚集地</span>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索MOD、工具、教程...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#" id="login-btn" class="login-btn">登录</a>
+                    <a href="#" id="register-btn" class="register-btn">注册</a>
+                    <a href="user-center.html" id="user-profile" class="user-profile" style="display:none;">
+                        <i class="fas fa-user"></i> 个人中心
+                    </a>
+                    <a href="#" id="logout-btn" class="logout-btn" style="display:none;">
+                        <i class="fas fa-sign-out-alt"></i> 退出
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                    <li><a href="game-center.html"><i class="fas fa-gamepad"></i> 游戏中心</a></li>
+                    <li><a href="downloads.html"><i class="fas fa-download"></i> 资源下载</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> 游戏资讯</a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> 论坛</a></li>
+                    <li><a href="mod-zone.html" class="active"><i class="fas fa-tools"></i> MOD专区</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容区 -->
+    <main class="container main-content">
+        <section class="mod-zone-banner">
+            <div class="banner-content">
+                <h1>MOD专区</h1>
+                <p>游戏改造与创意实现的乐园</p>
+            </div>
+        </section>
+
+        <section class="development-notice">
+            <div class="notice-icon">
+                <i class="fas fa-cogs"></i>
+            </div>
+            <h2>专区正在开发中</h2>
+            <p>我们的MOD专区正在紧锣密鼓地开发中，将为您带来丰富的游戏修改资源和工具。</p>
+            <p>预计上线时间：2025年8月15日</p>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <span>天</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <span>时</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <span>分</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds">00</span>
+                    <span>秒</span>
+                </div>
+            </div>
+            <div class="subscribe-form">
+                <h3>订阅通知</h3>
+                <p>在专区上线时获取邮件通知</p>
+                <form>
+                    <input type="email" placeholder="输入您的邮箱地址">
+                    <button type="submit" class="btn">订阅</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="coming-features">
+            <h2>即将推出的功能</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>海量MOD资源</h3>
+                    <p>提供各类游戏的MOD下载，包括角色、皮肤、地图、玩法等</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>MOD制作教程</h3>
+                    <p>从入门到精通的MOD制作指南，让您也能成为MOD作者</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>MOD作者社区</h3>
+                    <p>与MOD作者交流经验，获取反馈和支持</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>工具下载</h3>
+                    <p>提供各种MOD制作和安装工具，简化MOD使用流程</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">新手指南</a></li>
+                        <li><a href="#">论坛规则</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>抄袭对象</h4>
+                    <ul>
+                        <li><a href="https://www.gamersky.com/z/">游民星空</a></li>
+                        <li><a href="https://www.ali213.net/">游侠网</a></li>
+                        <li><a href="https://www.3dmgame.com/">3DM</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 SDEAM游戏论坛 版权所有</p>
+                <p>本站所有内容均由网友上传，仅供学习交流使用，请勿用于商业用途</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JavaScript/mod-zone.js"></script>
+    <script src="JavaScript/JavaScript.js"></script>
+</body>
+</html>

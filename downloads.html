@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资源下载 - SDEAM游戏论坛</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/downloads.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="logo">
+                    <h1>SDEAM</h1>
+                    <span>游戏玩家的聚集地</span>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索游戏、攻略、MOD...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#" id="login-btn" class="login-btn">登录</a>
+                    <a href="#" id="register-btn" class="register-btn">注册</a>
+                    <a href="user-center.html" id="user-profile" class="user-profile" style="display:none;">
+                        <i class="fas fa-user"></i> 个人中心
+                    </a>
+                    <a href="#" id="logout-btn" class="logout-btn" style="display:none;">
+                        <i class="fas fa-sign-out-alt"></i> 退出
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                    <li><a href="game-center.html"><i class="fas fa-gamepad"></i> 游戏中心</a></li>
+                    <li><a href="downloads.html" class="active"><i class="fas fa-download"></i> 资源下载</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> 游戏资讯</a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> 论坛</a></li>
+                    <li><a href="mod-zone.html"><i class="fas fa-tools"></i> MOD专区</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容区 -->
+    <main class="container main-content">
+        <!-- 资源分类导航 -->
+        <section class="download-categories">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="all">全部资源</button>
+                <button class="tab-btn" data-category="game">游戏本体</button>
+                <button class="tab-btn" data-category="patch">补丁更新</button>
+                <button class="tab-btn" data-category="mod">MOD模组</button>
+                <button class="tab-btn" data-category="tool">工具插件</button>
+                <button class="tab-btn" data-category="save">存档攻略</button>
+            </div>
+            
+            <!-- 资源搜索和排序 -->
+            <div class="download-filters">
+                <div class="search-filter">
+                    <input type="text" placeholder="搜索资源...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="sort-filter">
+                    <span>排序:</span>
+                    <select>
+                        <option value="newest">最新发布</option>
+                        <option value="popular">最受欢迎</option>
+                        <option value="downloads">下载最多</option>
+                        <option value="size">文件大小</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- 资源列表 -->
+        <section class="download-list">
+            <div class="section-header">
+                <h2><i class="fas fa-download"></i> 热门资源</h2>
+                <div class="view-options">
+                    <span>每页显示:</span>
+                    <select class="page-size">
+                        <option value="10">10条</option>
+                        <option value="20" selected>20条</option>
+                        <option value="50">50条</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 资源表格 -->
+            <div class="download-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="40%">资源名称</th>
+                            <th width="15%">大小</th>
+                            <th width="15%">下载量</th>
+                            <th width="15%">上传时间</th>
+                            <th width="15%">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 资源1 -->
+                        <tr data-category="game">
+                            <td>
+                                <div class="resource-info">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-gamepad"></i>
+                                    </div>
+                                    <div class="resource-details">
+                                        <h3>《战锤40K星际战士》大师匠心版</h3>
+                                        <p class="resource-description">包含全部DLC|官方中文|免安装绿色版</p>
+                                        <div class="resource-tags">
+                                            <span class="tag">免安装</span>
+                                            <span class="tag">中文</span>
+                                            <span class="tag">DLC</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>45.7GB</td>
+                            <td>12,458</td>
+                            <td>2025-06-15</td>
+                            <td>
+                                <a href="#" class="download-btn"><i class="fas fa-download"></i> 下载</a>
+                            </td>
+                        </tr>
+                        
+                        <!-- 资源2 -->
+                        <tr data-category="patch">
+                            <td>
+                                <div class="resource-info">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-wrench"></i>
+                                    </div>
+                                    <div class="resource-details">
+                                        <h3>《沙丘觉醒》v1.2.3升级补丁</h3>
+                                        <p class="resource-description">修复多个崩溃问题|优化性能|官方补丁</p>
+                                        <div class="resource-tags">
+                                            <span class="tag">官方</span>
+                                            <span class="tag">补丁</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>1.2GB</td>
+                            <td>8,742</td>
+                            <td>2025-06-14</td>
+                            <td>
+                                <a href="#" class="download-btn"><i class="fas fa-download"></i> 下载</a>
+                            </td>
+                        </tr>
+                        
+                        <!-- 资源3 -->
+                        <tr data-category="mod">
+                            <td>
+                                <div class="resource-info">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-puzzle-piece"></i>
+                                    </div>
+                                    <div class="resource-details">
+                                        <h3>《法环：黑夜君临》高清材质包</h3>
+                                        <p class="resource-description">4K纹理|环境美化|角色模型增强</p>
+                                        <div class="resource-tags">
+                                            <span class="tag">高清</span>
+                                            <span class="tag">材质</span>
+                                            <span class="tag">4K</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>6.8GB</td>
+                            <td>15,326</td>
+                            <td>2025-06-12</td>
+                            <td>
+                                <a href="#" class="download-btn"><i class="fas fa-download"></i> 下载</a>
+                            </td>
+                        </tr>
+                        
+                        <!-- 资源4 -->
+                        <tr data-category="tool">
+                            <td>
+                                <div class="resource-info">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-tools"></i>
+                                    </div>
+                                    <div class="resource-details">
+                                        <h3>游戏运行库合集包</h3>
+                                        <p class="resource-description">DirectX|VC++|.NET Framework|一键安装</p>
+                                        <div class="resource-tags">
+                                            <span class="tag">必备</span>
+                                            <span class="tag">运行库</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>1.5GB</td>
+                            <td>32,567</td>
+                            <td>2025-06-10</td>
+                            <td>
+                                <a href="#" class="download-btn"><i class="fas fa-download"></i> 下载</a>
+                            </td>
+                        </tr>
+                        
+                        <!-- 资源5 -->
+                        <tr data-category="save">
+                            <td>
+                                <div class="resource-info">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-save"></i>
+                                    </div>
+                                    <div class="resource-details">
+                                        <h3>《踏魂录：斩仙》全收集存档</h3>
+                                        <p class="resource-description">全武器|全成就|全地图解锁|完美存档</p>
+                                        <div class="resource-tags">
+                                            <span class="tag">存档</span>
+                                            <span class="tag">全收集</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>28MB</td>
+                            <td>5,432</td>
+                            <td>2025-06-08</td>
+                            <td>
+                                <a href="#" class="download-btn"><i class="fas fa-download"></i> 下载</a>
+                            </td>
+                        </tr>
+                        
+                        <!-- 更多资源行... -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 分页 -->
+            <div class="pagination">
+                <a href="#" class="page-btn disabled"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="page-btn active">1</a>
+                <a href="#" class="page-btn">2</a>
+                <a href="#" class="page-btn">3</a>
+                <a href="#" class="page-btn">4</a>
+                <a href="#" class="page-btn">5</a>
+                <a href="#" class="page-btn"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </section>
+
+        <!-- 下载须知 -->
+        <section class="download-notice">
+            <div class="notice-header">
+                <h3><i class="fas fa-exclamation-circle"></i> 下载须知</h3>
+            </div>
+            <div class="notice-content">
+                <ul>
+                    <li>所有资源均来自网友上传，仅供学习交流使用，请勿用于商业用途</li>
+                    <li>下载后请在24小时内删除，如果喜欢请购买正版支持开发者</li>
+                    <li>部分杀毒软件可能会误报，请添加信任或关闭杀毒软件后使用</li>
+                    <li>使用MOD前请备份原始文件，以防出现问题可以恢复</li>
+                    <li>遇到问题请到论坛相应版块发帖求助</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">新手指南</a></li>
+                        <li><a href="#">论坛规则</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>抄袭对象</h4>
+                    <ul>
+                        <li><a href="https://www.gamersky.com/z/">游民星空</a></li>
+                        <li><a href="https://www.ali213.net/">游侠网</a></li>
+                        <li><a href="https://www.3dmgame.com/">3DM</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 SDEAM游戏论坛 版权所有</p>
+                <p>本站所有内容均由网友上传，仅供学习交流使用，请勿用于商业用途</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JavaScript/downloads.js"></script>
+    <script src="JavaScript/JavaScript.js"></script>
+</body>
+</html>

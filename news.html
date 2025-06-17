@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏资讯 - SDEAM游戏论坛</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/news.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="logo">
+                    <h1>SDEAM</h1>
+                    <span>游戏玩家的聚集地</span>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索游戏、攻略、MOD...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#" id="login-btn" class="login-btn">登录</a>
+                    <a href="#" id="register-btn" class="register-btn">注册</a>
+                    <a href="user-center.html" id="user-profile" class="user-profile" style="display:none;">
+                        <i class="fas fa-user"></i> 个人中心
+                    </a>
+                    <a href="#" id="logout-btn" class="logout-btn" style="display:none;">
+                        <i class="fas fa-sign-out-alt"></i> 退出
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                    <li><a href="game-center.html"><i class="fas fa-gamepad"></i> 游戏中心</a></li>
+                    <li><a href="downloads.html"><i class="fas fa-download"></i> 资源下载</a></li>
+                    <li><a href="news.html" class="active"><i class="fas fa-newspaper"></i> 游戏资讯</a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> 论坛</a></li>
+                    <li><a href="mod-zone.html"><i class="fas fa-tools"></i> MOD专区</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容区 -->
+    <main class="container main-content">
+        <div class="content-grid">
+            <!-- 左侧内容 -->
+            <div class="left-content">
+                <!-- 资讯标题 -->
+                <section class="news-header">
+                    <div class="section-header">
+                        <h2><i class="fas fa-newspaper"></i> 游戏资讯</h2>
+                        <div class="news-filter">
+                            <select id="news-category">
+                                <option value="all">全部资讯</option>
+                                <option value="pc">PC游戏</option>
+                                <option value="console">主机游戏</option>
+                                <option value="mobile">手游</option>
+                                <option value="industry">行业动态</option>
+                            </select>
+                            <select id="news-sort">
+                                <option value="latest">最新发布</option>
+                                <option value="popular">最受欢迎</option>
+                                <option value="hot">热门资讯</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 资讯列表 -->
+                <section class="news-list">
+                    <div class="news-item">
+                        <div class="news-game-title">剑星</div>
+                        <div class="news-date">2025-06-16 21:44:02</div>
+                        <h3 class="news-title">爱你们哟！《剑星》总监金亭泰发微博感谢中国玩家</h3>
+                        <div class="news-image">
+                            <img src="images\new1.jpg" alt="剑星游戏截图">
+                        </div>
+                        <div class="news-content">
+                            <p>《剑星》PC版发售三天，销量超过100万套，这直接推动该作PC和PS5双平台累计销量超过300万份。游戏总监金亭泰在微博使用中文发推，衷心感谢所有中国朋友一直以来对游戏的支持和喜爱。</p>
+                            <p>金亭泰表示："中国玩家的热情让我们非常感动，我们正在考虑为中国玩家准备一些特别的DLC内容。"</p>
+                        </div>
+                        <div class="news-meta">
+                            <span><i class="fas fa-eye"></i> 2568</span>
+                            <span><i class="fas fa-comment"></i> 189</span>
+                            <span><i class="fas fa-share"></i> 分享</span>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-game-title">生化危机9</div>
+                        <div class="news-date">2025-06-16 21:27:12</div>
+                        <h3 class="news-title">安魂曲为谁而奏？《生化危机9》故事梗概发布</h3>
+                        <div class="news-image">
+                            <img src="images\new2.jpg" alt="生化危机9游戏截图">
+                        </div>
+                        <div class="news-content">
+                            <p>Capcom官博发布了《生化危机9：安魂曲》的官方故事梗概，本作将围绕FBI分析员格蕾丝·阿什克罗夫特展开，她在调查一起发生于废弃旅馆的离奇命案时，意外踏上了一场噩梦般的旅程。</p>
+                            <p>游戏将回归系列经典的恐怖生存玩法，同时引入全新的"理智系统"，玩家需要在保持角色理智的同时对抗各种生化怪物。</p>
+                        </div>
+                        <div class="news-meta">
+                            <span><i class="fas fa-eye"></i> 1987</span>
+                            <span><i class="fas fa-comment"></i> 124</span>
+                            <span><i class="fas fa-share"></i> 分享</span>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-game-title">咚奇刚：蕉力全开</div>
+                        <div class="news-date">2025-06-16 20:47:59</div>
+                        <h3 class="news-title">《咚奇刚：蕉力全开》直面会将于6月18日举行</h3>
+                        <div class="news-image">
+                            <img src="images\new3.jpg" alt="咚奇刚游戏截图">
+                        </div>
+                        <div class="news-content">
+                            <p>任天堂宣布将于6月18日召开《咚奇刚：蕉力全开》直面会，时长15分钟，具体召开时间有待公开。该作定于2025年7月17日发售，Switch 2独占。</p>
+                            <p>据内部消息透露，本作将包含全新的合作模式和超过50个全新关卡，同时保留系列经典的节奏玩法。</p>
+                        </div>
+                        <div class="news-meta">
+                            <span><i class="fas fa-eye"></i> 1543</span>
+                            <span><i class="fas fa-comment"></i> 87</span>
+                            <span><i class="fas fa-share"></i> 分享</span>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-game-title">漫威金刚狼</div>
+                        <div class="news-date">2025-06-16 20:39:11</div>
+                        <h3 class="news-title">《漫威金刚狼》《星际：异端先知》将在2026年3月之后发售</h3>
+                        <div class="news-image">
+                            <img src="images\new4.jpg" alt="漫威金刚狼游戏截图">
+                        </div>
+                        <div class="news-content">
+                            <p>索尼已经确认每年至少推出一部单机大作，今年有Sucker Punch开发的《羊蹄山之魂》和Naughty Dog的《最后生还者3》，而Insomniac的《漫威金刚狼》和Bend Studio的《星际：异端先知》则要等到2026年3月之后。</p>
+                            <p>业内人士透露，《漫威金刚狼》将采用全新的战斗系统，强调角色的野兽本能和狂暴攻击风格。</p>
+                        </div>
+                        <div class="news-meta">
+                            <span><i class="fas fa-eye"></i> 1876</span>
+                            <span><i class="fas fa-comment"></i> 112</span>
+                            <span><i class="fas fa-share"></i> 分享</span>
+                        </div>
+                    </div>
+
+                    <!-- 分页控件 -->
+                    <div class="pagination">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#"><i class="fas fa-angle-right"></i></a>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <div class="right-sidebar">
+                <!-- 登录面板 (未登录时显示) -->
+                <section class="login-panel" id="sidebar-login">
+                    <h3>会员登录</h3>
+                    <form id="sidebar-login-form">
+                        <input type="text" placeholder="用户名">
+                        <input type="password" placeholder="密码">
+                        <div class="form-options">
+                            <label><input type="checkbox"> 记住我</label>
+                            <a href="#">忘记密码?</a>
+                        </div>
+                        <button type="submit" class="btn">登录</button>
+                    </form>
+                    <div class="social-login">
+                        <p>快速登录:</p>
+                        <a href="#" class="qq-login"><i class="fab fa-qq"></i></a>
+                        <a href="#" class="wechat-login"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </section>
+
+                <!-- 用户信息 (登录后显示) -->
+                <section class="user-info-panel" id="sidebar-user-info" style="display:none;">
+                    <div class="user-avatar">
+                        <img src="https://via.placeholder.com/80" alt="用户头像" id="user-avatar-img">
+                    </div>
+                    <div class="user-details">
+                        <h3 id="sidebar-username">用户名</h3>
+                        <p>会员等级: <span id="user-level">初级玩家</span></p>
+                        <div class="user-stats">
+                            <div>
+                                <span class="stat-number" id="user-posts">0</span>
+                                <span>帖子</span>
+                            </div>
+                            <div>
+                                <span class="stat-number" id="user-comments">0</span>
+                                <span>评论</span>
+                            </div>
+                        </div>
+                        <a href="user-center.html" class="btn">个人中心</a>
+                    </div>
+                </section>
+
+                <!-- 热门资讯 -->
+                <section class="hot-news">
+                    <h3>热门资讯</h3>
+                    <div class="hot-news-list">
+                        <div class="hot-news-item">
+                            <a href="#">
+                                <h4>《黑神话:悟空》全球销量突破500万</h4>
+                                <span class="hot-news-date">06-15</span>
+                            </a>
+                        </div>
+                        <div class="hot-news-item">
+                            <a href="#">
+                                <h4>微软确认Xbox下一代主机2026年发布</h4>
+                                <span class="hot-news-date">06-14</span>
+                            </a>
+                        </div>
+                        <div class="hot-news-item">
+                            <a href="#">
+                                <h4>《GTA6》新预告片泄露，展示夜生活场景</h4>
+                                <span class="hot-news-date">06-13</span>
+                            </a>
+                        </div>
+                        <div class="hot-news-item">
+                            <a href="#">
+                                <h4>Steam夏季促销将于6月25日开始</h4>
+                                <span class="hot-news-date">06-12</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 热门标签 -->
+                <section class="hot-tags">
+                    <h3>热门标签</h3>
+                    <div class="tags">
+                        <a href="#"># 单机游戏</a>
+                        <a href="#"># 联机对战</a>
+                        <a href="#"># MOD</a>
+                        <a href="#"># 攻略</a>
+                        <a href="#"># 补丁</a>
+                        <a href="#"># 汉化</a>
+                        <a href="#"># 破解</a>
+                        <a href="#"># 存档</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">新手指南</a></li>
+                        <li><a href="#">论坛规则</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>抄袭对象</h4>
+                    <ul>
+                        <li><a href="https://www.gamersky.com/z/">游民星空</a></li>
+                        <li><a href="https://www.ali213.net/">游侠网</a></li>
+                        <li><a href="https://www.3dmgame.com/">3DM</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 SDEAM游戏论坛 版权所有</p>
+                <p>本站所有内容均由网友上传，仅供学习交流使用，请勿用于商业用途</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JavaScript/JavaScript.js"></script>
+    <script src="JavaScript/news.js"></script>
+</body>
+</html>

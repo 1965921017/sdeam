@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博德之门3 - SDEAM游戏论坛</title>
+    <link rel="stylesheet" href="CSS\index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 (与首页相同) -->
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="logo">
+                    <h1>SDEAM</h1>
+                    <span>游戏玩家的聚集地</span>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索游戏、攻略、MOD...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#" id="login-btn" class="login-btn">登录</a>
+                    <a href="#" id="register-btn" class="register-btn">注册</a>
+                    <a href="user-center.html" id="user-profile" class="user-profile" style="display:none;">
+                        <i class="fas fa-user"></i> 个人中心
+                    </a>
+                    <a href="#" id="logout-btn" class="logout-btn" style="display:none;">
+                        <i class="fas fa-sign-out-alt"></i> 退出
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                    <li><a href="game-center.html"><i class="fas fa-gamepad"></i> 游戏中心</a></li>
+                    <li><a href="downloads.html"><i class="fas fa-download"></i> 资源下载</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> 游戏资讯</a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> 论坛</a></li>
+                    <li><a href="mod-zone.html"><i class="fas fa-tools"></i> MOD专区</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 游戏详情内容 -->
+    <main class="container game-detail">
+        <div class="game-header">
+            <div class="game-cover">
+                <img src="images\bo3.jpg" alt="博德之门3">
+            </div>
+            <div class="game-info">
+                <h1>博德之门3</h1>
+                <p class="developer">开发商: Larian Studios</p>
+                <p class="publisher">发行商: Larian Studios</p>
+                <p class="release-date">发行日期: 2023年8月3日</p>
+                <div class="game-rating">
+                    <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </span>
+                    <span class="score">5/5</span>
+                </div>
+                <div class="game-tags">
+                    <span>角色扮演</span>
+                    <span>策略</span>
+                    <span>奇幻</span>
+                    <span>龙与地下城</span>
+                </div>
+                <div class="game-actions">
+                    <a href="#" class="btn btn-primary">加入收藏</a>
+                    <a href="#" class="btn btn-secondary">讨论区</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-content">
+            <section class="game-description">
+                <h2>游戏介绍</h2>
+                <p>《博德之门3》是Larian Studios带来的次时代RPG，故事发生在D&D(龙与地下城)的世界中。玩家将被卷入一场有关背叛、生存以及抵抗邪恶力量的宏大冒险。</p>
+                <p>游戏基于最新的D&D 5e规则打造，提供了前所未有的自由度，让你能够体验基于D&D规则的角色扮演、战术战斗和丰富的故事选择。召集你的队伍，回到被遗忘的国度，开启一段充满友谊与背叛、牺牲与生存、以及至上力量诱惑的传奇故事。</p>
+            </section>
+
+            <section class="game-features">
+                <h2>游戏特色</h2>
+                <ul>
+                    <li>基于D&D 5e规则的深度角色扮演体验</li>
+                    <li>丰富的角色创建系统，包含11个种族和12个职业</li>
+                    <li>完全自由的选择，你的决定将塑造游戏世界</li>
+                    <li>支持单人游戏或最多4人在线合作</li>
+                    <li>电影化的叙事方式，带来沉浸式体验</li>
+                </ul>
+            </section>
+
+            <section class="game-screenshots">
+                <h2>游戏截图</h2>
+                <div class="screenshots-grid">
+                    <img src="images/bo31.jpg" alt="博德之门3截图1">
+                    <img src="images/bo32.jpg" alt="博德之门3截图2">
+                    <img src="images/bo33.jpg" alt="博德之门3截图3">
+                </div>
+            </section>
+
+            <section class="game-requirements">
+                <h2>系统需求</h2>
+                <div class="requirements-grid">
+                    <div class="minimum">
+                        <h3>最低配置</h3>
+                        <ul>
+                            <li>操作系统: Windows 10 64-bit</li>
+                            <li>处理器: Intel I5 4690 / AMD FX 8350</li>
+                            <li>内存: 8 GB RAM</li>
+                            <li>显卡: Nvidia GTX 970 / RX 480 (4GB+ VRAM)</li>
+                            <li>存储空间: 150 GB 可用空间</li>
+                        </ul>
+                    </div>
+                    <div class="recommended">
+                        <h3>推荐配置</h3>
+                        <ul>
+                            <li>操作系统: Windows 10 64-bit</li>
+                            <li>处理器: Intel i7 8700K / AMD r5 3600</li>
+                            <li>内存: 16 GB RAM</li>
+                            <li>显卡: Nvidia 2060 Super / RX 5700 XT (8GB+ VRAM)</li>
+                            <li>存储空间: 150 GB SSD</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <aside class="game-sidebar">
+            <section class="related-games">
+                <h3>类似游戏</h3>
+                <div class="related-game">
+                    <img src="images/xk.jpg" alt="星空">
+                    <h4>星空</h4>
+                </div>
+                <div class="related-game">
+                    <img src="images/jianxing.jpg" alt="剑星">
+                    <h4>剑星</h4>
+                </div>
+            </section>
+
+            <section class="game-links">
+                <h3>相关链接</h3>
+                <ul>
+                    <li><a href="#">官方网站</a></li>
+                    <li><a href="#">Steam页面</a></li>
+                    <li><a href="#">攻略合集</a></li>
+                    <li><a href="#">MOD下载</a></li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+
+    <!-- 页脚 (与首页相同) -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">新手指南</a></li>
+                        <li><a href="#">论坛规则</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>抄袭对象</h4>
+                    <ul>
+                        <li><a href="https://www.gamersky.com/z/">游民星空</a></li>
+                        <li><a href="https://www.ali213.net/">游侠网</a></li>
+                        <li><a href="https://www.3dmgame.com/">3DM</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 SDEAM游戏论坛 版权所有</p>
+                <p>本站所有内容均由网友上传，仅供学习交流使用，请勿用于商业用途</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JavaScript\JavaScript.js"></script>
+</body>
+</html>

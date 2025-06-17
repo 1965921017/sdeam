@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏中心 - SDEAM游戏论坛</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/game-center.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="logo">
+                    <h1>SDEAM</h1>
+                    <span>游戏玩家的聚集地</span>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索游戏、攻略、MOD...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#" id="login-btn" class="login-btn">登录</a>
+                    <a href="#" id="register-btn" class="register-btn">注册</a>
+                    <a href="user-center.html" id="user-profile" class="user-profile" style="display:none;">
+                        <i class="fas fa-user"></i> 个人中心
+                    </a>
+                    <a href="#" id="logout-btn" class="logout-btn" style="display:none;">
+                        <i class="fas fa-sign-out-alt"></i> 退出
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                    <li><a href="game-center.html" class="active"><i class="fas fa-gamepad"></i> 游戏中心</a></li>
+                    <li><a href="downloads.html"><i class="fas fa-download"></i> 资源下载</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> 游戏资讯</a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> 论坛</a></li>
+                    <li><a href="mod-zone.html"><i class="fas fa-tools"></i> MOD专区</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容区 -->
+    <main class="container main-content">
+        <!-- 游戏筛选 -->
+        <section class="game-filters">
+            <div class="filter-group">
+                <span>平台:</span>
+                <select>
+                    <option>全部</option>
+                    <option>PC</option>
+                    <option>PlayStation</option>
+                    <option>Xbox</option>
+                    <option>Switch</option>
+                    <option>手机</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <span>类型:</span>
+                <select>
+                    <option>全部</option>
+                    <option>角色扮演</option>
+                    <option>动作冒险</option>
+                    <option>射击</option>
+                    <option>策略</option>
+                    <option>模拟</option>
+                    <option>体育竞技</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <span>排序:</span>
+                <select>
+                    <option>最新发布</option>
+                    <option>热门游戏</option>
+                    <option>评价最高</option>
+                    <option>价格从低到高</option>
+                    <option>价格从高到低</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- 游戏列表 -->
+        <section class="game-list-container">
+            <div class="section-header">
+                <h2><i class="fas fa-gamepad"></i> 全部游戏</h2>
+                <div class="view-options">
+                    <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                    <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+
+            <div class="games-grid">
+                <!-- 游戏1 -->
+                <div class="game-card">
+                    <div class="game-cover">
+                        <img src="images/game1.jpg" alt="战锤40K星际战士大师匠心版">
+                        <span class="game-tag new">新品</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>战锤40K星际战士大师匠心版</h3>
+                        <div class="game-meta">
+                            <span class="game-platform"><i class="fab fa-steam"></i> PC</span>
+                            <span class="game-date">上市: 2025-06-10</span>
+                        </div>
+                        <div class="game-price">
+                            <span class="price">¥298</span>
+                            <span class="original-price">¥348</span>
+                            <span class="discount">-14%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 游戏2 -->
+                <div class="game-card">
+                    <div class="game-cover">
+                        <img src="images/game2.jpg" alt="沙丘觉醒">
+                        <span class="game-tag new">新品</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>沙丘觉醒</h3>
+                        <div class="game-meta">
+                            <span class="game-platform"><i class="fab fa-steam"></i> PC</span>
+                            <span class="game-date">上市: 2025-06-10</span>
+                        </div>
+                        <div class="game-price">
+                            <span class="price">¥248</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 游戏3 -->
+                <div class="game-card">
+                    <div class="game-cover">
+                        <img src="images/game3.jpg" alt="踏魂录：斩仙">
+                        <span class="game-tag new">新品</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>踏魂录：斩仙</h3>
+                        <div class="game-meta">
+                            <span class="game-platform"><i class="fab fa-steam"></i> PC</span>
+                            <span class="game-date">上市: 2025-06-05</span>
+                        </div>
+                        <div class="game-price">
+                            <span class="price">¥168</span>
+                            <span class="original-price">¥198</span>
+                            <span class="discount">-15%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 游戏4 -->
+                <div class="game-card">
+                    <div class="game-cover">
+                        <img src="images/game4.jpg" alt="马里奥赛车世界">
+                        <span class="game-tag new">新品</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>马里奥赛车世界</h3>
+                        <div class="game-meta">
+                            <span class="game-platform"><i class="fas fa-gamepad"></i> Switch</span>
+                            <span class="game-date">上市: 2025-06-05</span>
+                        </div>
+                        <div class="game-price">
+                            <span class="price">¥299</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 游戏5 -->
+                <div class="game-card">
+                    <div class="game-cover">
+                        <img src="images/game5.jpg" alt="符文工房龙之天地">
+                        <span class="game-tag new">新品</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>符文工房龙之天地</h3>
+                        <div class="game-meta">
+                            <span class="game-platform"><i class="fas fa-gamepad"></i> Switch</span>
+                            <span class="game-date">上市: 2025-06-05</span>
+                        </div>
+                        <div class="game-price">
+                            <span class="price">¥258</span>
+                        <span class="original-price">¥298</span>
+                            <span class="discount">-13%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 游戏6 -->
+                <div class="game-card">
+                    <div class="game-cover">
+                        <img src="images/game6.jpg" alt="三角符文">
+                        <span class="game-tag new">新品</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>三角符文</h3>
+                        <div class="game-meta">
+                            <span class="game-platform"><i class="fab fa-steam"></i> PC</span>
+                            <span class="game-date">上市: 2025-06-04</span>
+                        </div>
+                        <div class="game-price">
+                            <span class="price">¥88</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 游戏7 -->
+                <div class="game-card">
+                    <div class="game-cover">
+                        <img src="images/game7.jpg" alt="法环：黑夜君临">
+                        <span class="game-tag">热门</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>法环：黑夜君临</h3>
+                        <div class="game-meta">
+                            <span class="game-platform"><i class="fab fa-steam"></i> PC</span>
+                            <span class="game-date">上市: 2025-05-30</span>
+                        </div>
+                        <div class="game-price">
+                            <span class="price">¥328</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 游戏8 -->
+                <div class="game-card">
+                    <div class="game-cover">
+                        <img src="images/game8.jpg" alt="鬼武者2高清复刻版">
+                        <span class="game-tag">折扣</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>鬼武者2高清复刻版</h3>
+                        <div class="game-meta">
+                            <span class="game-platform"><i class="fab fa-playstation"></i> PS5</span>
+                            <span class="game-date">上市: 2025-05-23</span>
+                        </div>
+                        <div class="game-price">
+                            <span class="price">¥129</span>
+                            <span class="original-price">¥199</span>
+                            <span class="discount">-35%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 游戏9 -->
+                <div class="game-card">
+                    <div class="game-cover">
+                        <img src="images/game9.jpg" alt="污痕圣杯阿瓦隆的陨落">
+                        <span class="game-tag">折扣</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>污痕圣杯阿瓦隆的陨落</h3>
+                        <div class="game-meta">
+                            <span class="game-platform"><i class="fab fa-steam"></i> PC</span>
+                            <span class="game-date">上市: 2025-05-22</span>
+                        </div>
+                        <div class="game-price">
+                            <span class="price">¥89</span>
+                            <span class="original-price">¥129</span>
+                            <span class="discount">-31%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 游戏10 -->
+                <div class="game-card">
+                    <div class="game-cover">
+                        <img src="images/game10.jpg" alt="幻想生活转转为与偷时间的小女">
+                        <span class="game-tag">热门</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>幻想生活转转为与偷时间的小女</h3>
+                        <div class="game-meta">
+                            <span class="game-platform"><i class="fas fa-gamepad"></i> Switch</span>
+                            <span class="game-date">上市: 2025-05-21</span>
+                        </div>
+                        <div class="game-price">
+                            <span class="price">¥269</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 游戏11 -->
+                <div class="game-card">
+                    <div class="game-cover">
+                        <img src="images/game11.jpg" alt="怪物火车2">
+                        <span class="game-tag">折扣</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>怪物火车2</h3>
+                        <div class="game-meta">
+                            <span class="game-platform"><i class="fab fa-steam"></i> PC</span>
+                            <span class="game-date">上市: 2025-05-21</span>
+                        </div>
+                        <div class="game-price">
+                            <span class="price">¥68</span>
+                            <span class="original-price">¥88</span>
+                            <span class="discount">-23%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 游戏12 -->
+                <div class="game-card">
+                    <div class="game-cover">
+                        <img src="images/game12.jpg" alt="毁灭战士：黑暗时代">
+                        <span class="game-tag">热门</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>毁灭战士：黑暗时代</h3>
+                        <div class="game-meta">
+                            <span class="game-platform"><i class="fab fa-steam"></i> PC</span>
+                            <span class="game-date">上市: 2025-05-15</span>
+                        </div>
+                        <div class="game-price">
+                            <span class="price">¥199</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 分页 -->
+            <div class="pagination">
+                <a href="#" class="page-btn disabled"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="page-btn active">1</a>
+                <a href="#" class="page-btn">2</a>
+                <a href="#" class="page-btn">3</a>
+                <a href="#" class="page-btn">4</a>
+                <a href="#" class="page-btn">5</a>
+                <a href="#" class="page-btn"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">新手指南</a></li>
+                        <li><a href="#">论坛规则</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>抄袭对象</h4>
+                    <ul>
+                        <li><a href="https://www.gamersky.com/z/">游民星空</a></li>
+                        <li><a href="https://www.ali213.net/">游侠网</a></li>
+                        <li><a href="https://www.3dmgame.com/">3DM</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 SDEAM游戏论坛 版权所有</p>
+                <p>本站所有内容均由网友上传，仅供学习交流使用，请勿用于商业用途</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JavaScript/game-center.js"></script>
+    <script src="JavaScript/JavaScript.js"></script>
+</body>
+</html>

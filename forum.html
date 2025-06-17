@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDEAM游戏论坛 - 论坛首页</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/forum.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 (与首页相同) -->
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="logo">
+                    <h1>SDEAM</h1>
+                    <span>游戏玩家的聚集地</span>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索游戏、攻略、MOD...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#" id="login-btn" class="login-btn">登录</a>
+                    <a href="#" id="register-btn" class="register-btn">注册</a>
+                    <a href="user-center.html" id="user-profile" class="user-profile" style="display:none;">
+                        <i class="fas fa-user"></i> 个人中心
+                    </a>
+                    <a href="#" id="logout-btn" class="logout-btn" style="display:none;">
+                        <i class="fas fa-sign-out-alt"></i> 退出
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                    <li><a href="game-center.html"><i class="fas fa-gamepad"></i> 游戏中心</a></li>
+                    <li><a href="downloads.html"><i class="fas fa-download"></i> 资源下载</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> 游戏资讯</a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> 论坛</a></li>
+                    <li><a href="mod-zone.html"><i class="fas fa-tools"></i> MOD专区</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 论坛主要内容区 -->
+    <main class="container forum-content">
+        <!-- 论坛面包屑导航 -->
+        <div class="breadcrumb">
+            <a href="index.html">首页</a> &gt; <span>论坛</span>
+        </div>
+        
+        <!-- 论坛分区 -->
+        <section class="forum-section">
+            <div class="section-header">
+                <h2><i class="fas fa-fire"></i> 热门讨论区</h2>
+            </div>
+            
+            <div class="forum-categories">
+                <div class="forum-category">
+                    <div class="category-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3><a href="#">动作冒险</a></h3>
+                        <p>讨论《艾尔登法环》、《黑神话:悟空》等动作冒险游戏</p>
+                    </div>
+                    <div class="category-stats">
+                        <span>帖子: 1,245</span>
+                        <span>今日: 56</span>
+                    </div>
+                    <div class="latest-post">
+                        <a href="post1.html">《黑神话:悟空》全BOSS打法攻略</a>
+                        <span>10分钟前 by 游戏达人</span>
+                    </div>
+                </div>
+                
+                <div class="forum-category">
+                    <div class="category-icon">
+                        <i class="fas fa-dragon"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3><a href="#">角色扮演</a></h3>
+                        <p>讨论《博德之门3》、《巫师3》等RPG游戏</p>
+                    </div>
+                    <div class="category-stats">
+                        <span>帖子: 982</span>
+                        <span>今日: 42</span>
+                    </div>
+                    <div class="latest-post">
+                        <a href="post2.html">分享一个自制的《巫师3》高清材质包</a>
+                        <span>30分钟前 by MOD爱好者</span>
+                    </div>
+                </div>
+                
+                <!-- 更多分区... -->
+            </div>
+        </section>
+        
+        <!-- 最新帖子 -->
+        <section class="latest-posts-section">
+            <div class="section-header">
+                <h2><i class="fas fa-list"></i> 最新帖子</h2>
+                <a href="#" class="more-link">更多 ></a>
+            </div>
+            
+            <div class="post-list">
+                <div class="post-item">
+                    <div class="post-votes">
+                        <button class="upvote"><i class="fas fa-arrow-up"></i></button>
+                        <span class="vote-count">124</span>
+                        <button class="downvote"><i class="fas fa-arrow-down"></i></button>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-title">
+                            <a href="post1.html">《黑神话:悟空》全BOSS打法攻略</a>
+                            <span class="post-category">动作冒险</span>
+                        </div>
+                        <div class="post-excerpt">
+                            <p>整理了游戏中所有BOSS的打法技巧和弱点分析，包括隐藏BOSS...</p>
+                        </div>
+                        <div class="post-meta">
+                            <span class="post-author"><i class="fas fa-user"></i> 游戏达人</span>
+                            <span class="post-time"><i class="far fa-clock"></i> 10分钟前</span>
+                            <span class="post-comments"><i class="far fa-comment"></i> 89 评论</span>
+                            <span class="post-views"><i class="far fa-eye"></i> 1,256 浏览</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="post-item">
+                    <div class="post-votes">
+                        <button class="upvote"><i class="fas fa-arrow-up"></i></button>
+                        <span class="vote-count">87</span>
+                        <button class="downvote"><i class="fas fa-arrow-down"></i></button>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-title">
+                            <a href="post2.html">分享一个自制的《巫师3》高清材质包</a>
+                            <span class="post-category">角色扮演</span>
+                        </div>
+                        <div class="post-excerpt">
+                            <p>花了三个月时间制作的4K高清材质包，全面提升游戏画质...</p>
+                        </div>
+                        <div class="post-meta">
+                            <span class="post-author"><i class="fas fa-user"></i> MOD爱好者</span>
+                            <span class="post-time"><i class="far fa-clock"></i> 30分钟前</span>
+                            <span class="post-comments"><i class="far fa-comment"></i> 45 评论</span>
+                            <span class="post-views"><i class="far fa-eye"></i> 876 浏览</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 更多帖子... -->
+            </div>
+        </section>
+        
+        <!-- 热门标签 -->
+        <section class="popular-tags">
+            <div class="section-header">
+                <h2><i class="fas fa-tags"></i> 热门标签</h2>
+            </div>
+            <div class="tags">
+                <a href="#" class="tag"># 攻略</a>
+                <a href="#" class="tag"># MOD</a>
+                <a href="#" class="tag"># 汉化</a>
+                <a href="#" class="tag"># 补丁</a>
+                <a href="#" class="tag"># 存档</a>
+                <a href="#" class="tag"># 联机</a>
+                <a href="#" class="tag"># 破解</a>
+                <a href="#" class="tag"># DLC</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 (与首页相同) -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">新手指南</a></li>
+                        <li><a href="#">论坛规则</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>抄袭对象</h4>
+                    <ul>
+                        <li><a href="https://www.gamersky.com/z/">游民星空</a></li>
+                        <li><a href="https://www.ali213.net/">游侠网</a></li>
+                        <li><a href="https://www.3dmgame.com/">3DM</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 SDEAM游戏论坛 版权所有</p>
+                <p>本站所有内容均由网友上传，仅供学习交流使用，请勿用于商业用途</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JavaScript\JavaScript.js"></script>
+
+</body>
+</html>

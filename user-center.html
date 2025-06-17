@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心 - SDEAM游戏论坛</title>
+    <link rel="stylesheet" href="CSS\index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="logo">
+                    <h1>SDEAM</h1>
+                    <span>游戏玩家的聚集地</span>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索游戏、攻略、MOD...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#" id="user-profile" class="user-profile">
+                        <i class="fas fa-user"></i> 个人中心
+                    </a>
+                    <a href="#" id="logout-btn" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> 退出
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                    <li><a href="game-center.html"><i class="fas fa-gamepad"></i> 游戏中心</a></li>
+                    <li><a href="downloads.html"><i class="fas fa-download"></i> 资源下载</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> 游戏资讯</a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> 论坛</a></li>
+                    <li><a href="mod-zone.html"><i class="fas fa-tools"></i> MOD专区</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 用户中心内容 -->
+    <main class="container user-center">
+        <div class="user-profile-header">
+            <div class="user-avatar">
+                <img src="https://via.placeholder.com/150" alt="用户头像" id="user-avatar">
+                <button id="change-avatar" class="btn">更换头像</button>
+                <input type="file" id="avatar-upload" accept="image/*" style="display:none;">
+            </div>
+            <div class="user-info">
+                <h2 id="user-name">用户名</h2>
+                <p><i class="fas fa-envelope"></i> <span id="user-email">user@example.com</span></p>
+                <p><i class="fas fa-calendar-alt"></i> 加入日期: <span id="join-date">2023-01-01</span></p>
+                <p><i class="fas fa-star"></i> 会员等级: <span id="user-level">初级玩家</span></p>
+            </div>
+            <div class="user-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="post-count">0</span>
+                    <span class="stat-label">帖子</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="comment-count">0</span>
+                    <span class="stat-label">评论</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="like-count">0</span>
+                    <span class="stat-label">获赞</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="user-content-tabs">
+            <button class="tab-btn active" data-tab="my-posts">我的帖子</button>
+            <button class="tab-btn" data-tab="saved-posts">收藏内容</button>
+            <button class="tab-btn" data-tab="account-settings">账号设置</button>
+        </div>
+
+        <div class="tab-content active" id="my-posts">
+            <h3><i class="fas fa-file-alt"></i> 我的帖子</h3>
+            <div class="post-list">
+                <div class="post-item">
+                    <div class="post-title">
+                        <a href="post1.html">《黑神话:悟空》全BOSS打法攻略</a>
+                        <span class="post-time">发布于: 2023-10-15</span>
+                    </div>
+                    <div class="post-meta">
+                        <span><i class="fas fa-eye"></i> 1256</span>
+                        <span><i class="fas fa-comment"></i> 89</span>
+                        <span><i class="fas fa-heart"></i> 256</span>
+                    </div>
+                </div>
+                <div class="post-item">
+                    <div class="post-title">
+                        <a href="post2.html">分享一个自制的《巫师3》高清材质包</a>
+                        <span class="post-time">发布于: 2023-09-28</span>
+                    </div>
+                    <div class="post-meta">
+                        <span><i class="fas fa-eye"></i> 876</span>
+                        <span><i class="fas fa-comment"></i> 45</span>
+                        <span><i class="fas fa-heart"></i> 132</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="saved-posts">
+            <h3><i class="fas fa-bookmark"></i> 收藏内容</h3>
+            <div class="saved-list">
+                <div class="saved-item">
+                    <a href="#">《赛博朋克2077》2.0版本全技能解析</a>
+                    <span>收藏于: 2023-10-10</span>
+                </div>
+                <div class="saved-item">
+                    <a href="#">《星空》全星系探索指南</a>
+                    <span>收藏于: 2023-09-15</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="account-settings">
+            <h3><i class="fas fa-cog"></i> 账号设置</h3>
+            <form id="settings-form">
+                <div class="form-group">
+                    <label for="display-name">显示名称</label>
+                    <input type="text" id="display-name" placeholder="输入新的显示名称">
+                </div>
+                <div class="form-group">
+                    <label for="current-password">当前密码</label>
+                    <input type="password" id="current-password" placeholder="输入当前密码">
+                </div>
+                <div class="form-group">
+                    <label for="new-password">新密码 (留空则不修改)</label>
+                    <input type="password" id="new-password" placeholder="输入新密码">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-new-password">确认新密码</label>
+                    <input type="password" id="confirm-new-password" placeholder="再次输入新密码">
+                </div>
+                <div class="form-group">
+                    <label for="signature">个人签名</label>
+                    <textarea id="signature" placeholder="输入你的个人签名" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn">保存设置</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">新手指南</a></li>
+                        <li><a href="#">论坛规则</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>合作伙伴</h4>
+                    <ul>
+                        <li><a href="#">游民星空</a></li>
+                        <li><a href="#">游侠网</a></li>
+                        <li><a href="#">A9VG</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 SDEAM游戏论坛 版权所有</p>
+                <p>本站所有内容均由网友上传，仅供学习交流使用，请勿用于商业用途</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JavaScript\JavaScript.js"></script>
+    <script src="JavaScript\user-center.js"></script>
+
+</body>
+</html>

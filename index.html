@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDEAM游戏论坛 - 玩家的聚集地</title>
+    <link rel="stylesheet" href="CSS\index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="logo">
+                    <h1>SDEAM</h1>
+                    <span>游戏玩家的聚集地</span>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索游戏、攻略、MOD...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#" id="login-btn" class="login-btn">登录</a>
+                    <a href="#" id="register-btn" class="register-btn">注册</a>
+                    <a href="user-center.html" id="user-profile" class="user-profile" style="display:none;">
+                        <i class="fas fa-user"></i> 个人中心
+                    </a>
+                    <a href="#" id="logout-btn" class="logout-btn" style="display:none;">
+                        <i class="fas fa-sign-out-alt"></i> 退出
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                    <li><a href="game-center.html"><i class="fas fa-gamepad"></i> 游戏中心</a></li>
+                    <li><a href="downloads.html"><i class="fas fa-download"></i> 资源下载</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> 游戏资讯</a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> 论坛</a></li>
+                    <li><a href="mod-zone.html"><i class="fas fa-tools"></i> MOD专区</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 登录弹窗 -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>会员登录</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <input type="text" id="login-username" placeholder="用户名" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="login-password" placeholder="密码" required>
+                </div>
+                <div class="form-options">
+                    <label><input type="checkbox" id="remember-me"> 记住我</label>
+                    <a href="#">忘记密码?</a>
+                </div>
+                <button type="submit" class="btn">登录</button>
+            </form>
+            <div class="social-login">
+                <p>快速登录:</p>
+                <a href="#" class="qq-login"><i class="fab fa-qq"></i></a>
+                <a href="#" class="wechat-login"><i class="fab fa-weixin"></i></a>
+            </div>
+            <div class="switch-form">
+                还没有账号? <a href="#" id="show-register">立即注册</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 注册弹窗 -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>用户注册</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <input type="text" id="reg-username" placeholder="用户名 (4-16位字母或数字)" required>
+                    <span class="error-msg" id="username-error"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="reg-email" placeholder="电子邮箱" required>
+                    <span class="error-msg" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="reg-password" placeholder="密码 (6-20位字符)" required>
+                    <span class="error-msg" id="password-error"></span>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="reg-confirm-password" placeholder="确认密码" required>
+                    <span class="error-msg" id="confirm-password-error"></span>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="agree-terms" required> 
+                        我已阅读并同意<a href="#">用户协议</a>和<a href="#">隐私政策</a>
+                    </label>
+                </div>
+                <button type="submit" class="btn">注册</button>
+            </form>
+            <div class="switch-form">
+                已有账号? <a href="#" id="show-login">立即登录</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容区 -->
+    <main class="container main-content">
+        <!-- 轮播图 -->
+        <section class="slider">
+            <div class="slide active">
+                <img src="images\jianxing.jpg" alt="游戏推荐1">
+                <div class="slide-info">
+                    <h3>《剑星》震撼来袭</h3>
+                    <p>未知故事、地图和BOSS等你来探索</p>
+                    <a href="#" class="btn">查看详情</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images\mm.jpg" alt="游戏推荐2">
+                <div class="slide-info">
+                    <h3>《明末渊虚之羽》7.24正式发售</h3>
+                    <p>现已开启预售</p>
+                    <a href="#" class="btn">查看详情</a>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- 内容区块 -->
+        <div class="content-grid">
+            <!-- 左侧内容 -->
+            <div class="left-content">
+                <!-- 热门游戏 -->
+                <section class="hot-games">
+                    <div class="section-header">
+                        <h2><i class="fas fa-fire"></i> 热门游戏</h2>
+                        <a href="game-center.html" class="more-link">更多 ></a>
+                    </div>
+                    <div class="game-list">
+                        <div class="game-card">
+                            <a href="xk.html"><img src="images\xk.jpg" alt="游戏1" ></a>
+                            <div class="game-info">
+                                <h3>星空</h3>
+                                <p>Bethesda全新太空RPG</p>
+                                <div class="game-meta">
+                                    <span><i class="fas fa-comment"></i> 1245</span>
+                                    <span><i class="fas fa-eye"></i> 5689</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card">
+                            <a href="bo3.html"><img src="images\bo3.jpg" alt="游戏2"></a>
+                            <div class="game-info">
+                                <h3>博德之门3</h3>
+                                <p>经典CRPG续作</p>
+                                <div class="game-meta">
+                                    <span><i class="fas fa-comment"></i> 982</span>
+                                    <span><i class="fas fa-eye"></i> 4321</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 更多游戏卡片... -->
+                    </div>
+                </section>
+
+                <!-- 最新帖子 -->
+                <section class="latest-posts">
+                    <div class="section-header">
+                        <h2><i class="fas fa-list"></i> 最新帖子</h2>
+                        <a href="forum.html" class="more-link">更多 ></a>
+                    </div>
+                    <div class="post-list">
+                        <div class="post-item">
+                            <div class="post-title">
+                                <a href="post1.html">《黑神话:悟空》全BOSS打法攻略</a>
+                                <span class="post-time">10分钟前</span>
+                            </div>
+                            <div class="post-meta">
+                                <span>作者: 游戏达人</span>
+                                <span>查看: 1256</span>
+                                <span>回复: 89</span>
+                            </div>
+                        </div>
+                        <div class="post-item">
+                            <div class="post-title">
+                                <a href="post2.html">分享一个自制的《巫师3》高清材质包</a>
+                                <span class="post-time">30分钟前</span>
+                            </div>
+                            <div class="post-meta">
+                                <span>作者: MOD爱好者</span>
+                                <span>查看: 876</span>
+                                <span>回复: 45</span>
+                            </div>
+                        </div>
+                        <!-- 更多帖子... -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <div class="right-sidebar">
+                <!-- 登录面板 (未登录时显示) -->
+                <section class="login-panel" id="sidebar-login">
+                    <h3>会员登录</h3>
+                    <form id="sidebar-login-form">
+                        <input type="text" placeholder="用户名">
+                        <input type="password" placeholder="密码">
+                        <div class="form-options">
+                            <label><input type="checkbox"> 记住我</label>
+                            <a href="#">忘记密码?</a>
+                        </div>
+                        <button type="submit" class="btn">登录</button>
+                    </form>
+                    <div class="social-login">
+                        <p>快速登录:</p>
+                        <a href="#" class="qq-login"><i class="fab fa-qq"></i></a>
+                        <a href="#" class="wechat-login"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </section>
+
+                <!-- 用户信息 (登录后显示) -->
+                <section class="user-info-panel" id="sidebar-user-info" style="display:none;">
+                    <div class="user-avatar">
+                        <img src="https://via.placeholder.com/80" alt="用户头像" id="user-avatar-img">
+                    </div>
+                    <div class="user-details">
+                        <h3 id="sidebar-username">用户名</h3>
+                        <p>会员等级: <span id="user-level">初级玩家</span></p>
+                        <div class="user-stats">
+                            <div>
+                                <span class="stat-number" id="user-posts">0</span>
+                                <span>帖子</span>
+                            </div>
+                            <div>
+                                <span class="stat-number" id="user-comments">0</span>
+                                <span>评论</span>
+                            </div>
+                        </div>
+                        <a href="user-center.html" class="btn">个人中心</a>
+                    </div>
+                </section>
+
+                <!-- 热门标签 -->
+                <section class="hot-tags">
+                    <h3>热门标签</h3>
+                    <div class="tags">
+                        <a href="#"># 单机游戏</a>
+                        <a href="#"># 联机对战</a>
+                        <a href="#"># MOD</a>
+                        <a href="#"># 攻略</a>
+                        <a href="#"># 补丁</a>
+                        <a href="#"># 汉化</a>
+                        <a href="#"># 破解</a>
+                        <a href="#"># 存档</a>
+                    </div>
+                </section>
+
+                <!-- 网站公告 -->
+                <section class="announcement">
+                    <h3>网站公告</h3>
+                    <div class="announcement-content">
+                        <p>论坛新版本上线，欢迎反馈问题</p>
+                        <p>MOD区发帖规范更新，请仔细阅读</p>
+                        <p>五一假期期间资源审核可能延迟</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">新手指南</a></li>
+                        <li><a href="#">论坛规则</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>抄袭对象</h4>
+                    <ul>
+                        <li><a href="https://www.gamersky.com/z/">游民星空</a></li>
+                        <li><a href="https://www.ali213.net/">游侠网</a></li>
+                        <li><a href="https://www.3dmgame.com/">3DM</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 SDEAM游戏论坛 版权所有</p>
+                <p>本站所有内容均由网友上传，仅供学习交流使用，请勿用于商业用途</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JavaScript\JavaScript.js"></script>
+</body>
+</html>
